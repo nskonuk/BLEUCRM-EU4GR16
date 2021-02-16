@@ -1,5 +1,5 @@
 package com.bleucrm.pages;
 
 public class BasePage {
-    //Hello
+    //Hello group
 }
