@@ -3,8 +3,8 @@ Feature: Login
 
   Background:
     Given the user is on the login page
-  @login
-  Scenario Outline: Authorized login with <username>
+
+  Scenario Outline: Authorized user is logging with <username>
       When the user logins with valid "<username>" and password
       Then the user should be able to login
 
@@ -13,6 +13,18 @@ Feature: Login
     | hr5         |
     | helpdesk5   |
     | marketing5  |
+
+  @login
+  Scenario Outline: <username> is logged in
+    When the user logged as "<username>"
+
+    Examples:
+      | username   |
+      | hr1        |
+      | helpdesk2  |
+      | marketing3 |
+
+
 
   @nonauthorizedLogin
   Scenario Outline: Non-authorized login users

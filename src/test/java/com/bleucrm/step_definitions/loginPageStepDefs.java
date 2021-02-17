@@ -32,6 +32,18 @@ public class loginPageStepDefs {
         loginPage.login(username,password);
     }
 
+    @When("the user logged as {string}")
+    public void the_user_logged_as(String usernameStr) {
+        String url = ConfigurationReader.get("url");
+        Driver.get().get(url);
+
+        String username = ConfigurationReader.get(usernameStr.trim());
+        String password = ConfigurationReader.get("password");
+
+        LoginPage loginPage = new LoginPage();
+        loginPage.login(username,password);
+    }
+
     // the page title is compared to see if the user is logged in
     @Then("the user should be able to login")
     public void the_user_should_be_able_to_login() {
