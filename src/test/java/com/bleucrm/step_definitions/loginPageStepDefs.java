@@ -32,6 +32,21 @@ public class loginPageStepDefs {
         loginPage.login(username,password);
     }
 
+    // username and password is parametric
+    @When("the user logins with valid {string} and {string}")
+    public void the_user_logins_with_valid_and(String usernameStr, String password) {
+        String username = ConfigurationReader.get(usernameStr.trim());
+
+        BrowserUtils.waitFor(3);
+
+        LoginPage loginPage = new LoginPage();
+        loginPage.login(username,password);
+    }
+
+    // the user logged in with only username first part without "@cybertekschool.com"
+    // hr(1-10)
+    // marketing(1-10)
+    // helpdesk(1-10)
     @When("the user logged as {string}")
     public void the_user_logged_as(String usernameStr) {
         String url = ConfigurationReader.get("url");

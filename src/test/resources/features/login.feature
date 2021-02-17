@@ -13,8 +13,18 @@ Feature: Login
     | helpdesk5   |
     | marketing5  |
 
-    @login
-  Scenario Outline: <username> is logged in
+  @login
+  Scenario Outline: Authorized second user is logging with <username> and <password>
+    When the user logins with valid "<username>" and "<password>"
+    Then the user should be able to login
+
+    Examples:
+      | username    | password  |
+      | hr2         |  UserUser |
+      | helpdesk2   |  UserUser |
+      | marketing2  |  UserUser |
+
+ Scenario Outline: <username> is logged in
     When the user logged as "<username>"
 
     Examples:
@@ -22,6 +32,8 @@ Feature: Login
       | hr1        |
       | helpdesk2  |
       | marketing3 |
+
+# UserUser
 
    @nonauthorizedLogin
   Scenario Outline: Non-authorized login users
