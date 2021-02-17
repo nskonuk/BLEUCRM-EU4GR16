@@ -18,27 +18,53 @@ public class loginPageStepDefs {
     }
 
 
+    // login with only one parametric user name
+    // password is coming from configuration file
     @When("the user logins with valid {string} and password")
     public void the_user_logins_with_valid_and_password(String usernameStr) {
+
         String username = ConfigurationReader.get(usernameStr.trim());
         String password = ConfigurationReader.get("password");
 
-        BrowserUtils.waitFor(3);
+        BrowserUtils.waitFor(1);
+
         LoginPage loginPage = new LoginPage();
         loginPage.login(username,password);
     }
 
+    // the page title is compared to see if the user is logged in
     @Then("the user should be able to login")
     public void the_user_should_be_able_to_login() {
-        String expectedTitle = "Portal";
+
         BrowserUtils.waitFor(1);
-        String actualTitle = Driver.get().getTitle();
-        Assert.assertTrue("verify that user in Portal page",
-                actualTitle.contains(expectedTitle));
-        System.out.println("Succesfully in Portal Page");
 
-        System.out.println(Driver.get().getTitle());
+       Assert.assertTrue("verify that user in Portal page",
+                Driver.get().getTitle().contains("Portal"));
+    }
 
+    // non-authorized users should not log in
+    @When("the user logs in with invalid {string} and {string}")
+    public void the_user_logs_in_with_invalid_and(String invalidUsername, String invalidPassword) {
+
+        BrowserUtils.waitFor(2);
+
+        String username = ConfigurationReader.get(invalidUsername);
+        String password = ConfigurationReader.get(invalidPassword);
+
+        LoginPage loginPage = new LoginPage();
+        loginPage.login(invalidUsername, invalidPassword);
+    }
+
+
+    // error messages for nonauthorized users
+    @Then("Login error message should be displayed")
+    public void login_error_message_should_be_displayed() {
+
+        LoginPage loginPage = new LoginPage();
+
+        Assert.assertEquals("verify that invalid credentials",
+                loginPage.getLoginErrorMessage(),
+                "Incorrect login or password");
     }
 
 }

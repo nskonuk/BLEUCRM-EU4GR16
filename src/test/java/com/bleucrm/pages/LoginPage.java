@@ -20,6 +20,9 @@ public class LoginPage {
     @FindBy(className = "login-btn")
     public WebElement submit;
 
+    @FindBy(className = "errortext")
+    public WebElement invalidCredentialMessage;
+
     public void login(String userNameStr, String passwordStr) {
         userName.sendKeys(userNameStr);
         password.sendKeys(passwordStr);
@@ -27,5 +30,7 @@ public class LoginPage {
 
     }
 
-
+    public String getLoginErrorMessage(){
+        return invalidCredentialMessage.getText();
+    }
 }
