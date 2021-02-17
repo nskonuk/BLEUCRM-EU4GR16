@@ -14,7 +14,7 @@ Feature: Login
     | marketing5  |
 
   @login
-  Scenario Outline: Authorized second user is logging with <username> and <password>
+  Scenario Outline: Authorized user is logging with <username> and <password>
     When the user logins with valid "<username>" and "<password>"
     Then the user should be able to login
 
