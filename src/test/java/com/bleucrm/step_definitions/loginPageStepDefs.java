@@ -32,28 +32,36 @@ public class loginPageStepDefs {
         loginPage.login(username,password);
     }
 
-    // username and password is parametric
+    // login with two parameters
     @When("the user logins with valid {string} and {string}")
-    public void the_user_logins_with_valid_and(String usernameStr, String password) {
+    public void the_user_logins_with_valid_and(String usernameStr, String passwordStr) {
         String username = ConfigurationReader.get(usernameStr.trim());
 
-        BrowserUtils.waitFor(3);
+        BrowserUtils.waitFor(1);
 
         LoginPage loginPage = new LoginPage();
-        loginPage.login(username,password);
+        loginPage.login(username,passwordStr);
     }
 
-    // the user logged in with only username first part without "@cybertekschool.com"
-    // hr(1-10)
-    // marketing(1-10)
-    // helpdesk(1-10)
+
+    // this method is especially to be used for the other test cases after login
     @When("the user logged as {string}")
     public void the_user_logged_as(String usernameStr) {
+
+        String password = ConfigurationReader.get("password");
+        String username="";
+
         String url = ConfigurationReader.get("url");
         Driver.get().get(url);
 
-        String username = ConfigurationReader.get(usernameStr.trim());
-        String password = ConfigurationReader.get("password");
+        if(usernameStr.equals("helpdesk"))
+            username = ConfigurationReader.get("helpdesk1");
+        else if(usernameStr.equals("hr"))
+            username = ConfigurationReader.get("hr1");
+        else if(usernameStr.equals("marketing"))
+            username = ConfigurationReader.get("marketing1");
+        else
+            username = ConfigurationReader.get(usernameStr);
 
         LoginPage loginPage = new LoginPage();
         loginPage.login(username,password);

@@ -24,7 +24,14 @@ Feature: Login
       | helpdesk2   |  UserUser |
       | marketing2  |  UserUser |
 
- Scenario Outline: <username> is logged in
+  @login
+      # this "logged as" scenario is for other test cases rather than login tests
+      # username can be called only with first part of the username, "hr1" for "hr1@cybertekschool.com"
+      # hr  --> hr1@cybetrekschool.com
+      # hr1 --> hr1@cybertekschool.com
+      # hr2 --> hr2@cybertekschool.com
+      # hr3 --> hr3@cybertekschool.com
+  Scenario Outline: <username> is logged in
     When the user logged as "<username>"
 
     Examples:
@@ -33,7 +40,6 @@ Feature: Login
       | helpdesk2  |
       | marketing3 |
 
-# UserUser
 
    @nonauthorizedLogin
   Scenario Outline: Non-authorized login users
