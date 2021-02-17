@@ -11,7 +11,7 @@ Feature: Login
       Then the user should be able to login
 
   Examples:
-    | username   |
-    | hr5        |
-    | helpdesk5  |
-    | marketing5 |
+    | username    |
+    | hr5         |
+    | helpdesk5   |
+    | marketing5  |
