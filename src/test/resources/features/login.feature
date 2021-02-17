@@ -1,6 +1,5 @@
 Feature: Login
 
-
   Background:
     Given the user is on the login page
 
@@ -14,7 +13,7 @@ Feature: Login
     | helpdesk5   |
     | marketing5  |
 
-  @login
+    @login
   Scenario Outline: <username> is logged in
     When the user logged as "<username>"
 
@@ -24,9 +23,7 @@ Feature: Login
       | helpdesk2  |
       | marketing3 |
 
-
-
-  @nonauthorizedLogin
+   @nonauthorizedLogin
   Scenario Outline: Non-authorized login users
     When the user logs in with invalid "<username>" and "<password>"
     Then Login error message should be displayed
