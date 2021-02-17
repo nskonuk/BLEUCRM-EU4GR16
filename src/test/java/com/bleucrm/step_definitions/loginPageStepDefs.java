@@ -54,6 +54,7 @@ public class loginPageStepDefs {
         String url = ConfigurationReader.get("url");
         Driver.get().get(url);
 
+        // this piece is added for the usernames without numbers like usertypes
         if(usernameStr.equals("helpdesk"))
             username = ConfigurationReader.get("helpdesk1");
         else if(usernameStr.equals("hr"))
