@@ -17,52 +17,16 @@ public class loginPageStepDefs {
         Driver.get().get(url);
     }
 
-
-    // login with only one parametric user name
-    // password is coming from configuration file
-    @When("the user logins with valid {string} and password")
-    public void the_user_logins_with_valid_and_password(String usernameStr) {
-
-        String username = ConfigurationReader.get(usernameStr.trim());
-        String password = ConfigurationReader.get("password");
-
-        BrowserUtils.waitFor(1);
-
-        LoginPage loginPage = new LoginPage();
-        loginPage.login(username,password);
-    }
-
-    // login with two parameters
-    @When("the user logins with valid {string} and {string}")
-    public void the_user_logins_with_valid_and(String usernameStr, String passwordStr) {
-        String username = ConfigurationReader.get(usernameStr.trim());
-
-        BrowserUtils.waitFor(1);
-
-        LoginPage loginPage = new LoginPage();
-        loginPage.login(username,passwordStr);
-    }
-
-
-    // this method is especially to be used for the other test cases after login
+   // this method is especially to be used for the other test cases after login
     @When("the user logged as {string}")
     public void the_user_logged_as(String usernameStr) {
 
-        String password = ConfigurationReader.get("password");
-        String username="";
 
         String url = ConfigurationReader.get("url");
         Driver.get().get(url);
 
-        // this piece is added for the usernames without numbers like usertypes
-        if(usernameStr.equals("helpdesk"))
-            username = ConfigurationReader.get("helpdesk1");
-        else if(usernameStr.equals("hr"))
-            username = ConfigurationReader.get("hr1");
-        else if(usernameStr.equals("marketing"))
-            username = ConfigurationReader.get("marketing1");
-        else
-            username = ConfigurationReader.get(usernameStr);
+        String password = ConfigurationReader.get("password");
+        String username = ConfigurationReader.get(usernameStr);
 
         LoginPage loginPage = new LoginPage();
         loginPage.login(username,password);
@@ -78,18 +42,16 @@ public class loginPageStepDefs {
                 Driver.get().getTitle().contains("Portal"));
     }
 
-    // non-authorized users should not log in
-    @When("the user logs in with invalid {string} and {string}")
-    public void the_user_logs_in_with_invalid_and(String invalidUsername, String invalidPassword) {
 
+
+    @When("the user logs in with {string} and {string}")
+    public void the_user_logs_in_with_and(String username, String password) {
         BrowserUtils.waitFor(2);
 
-        String username = ConfigurationReader.get(invalidUsername);
-        String password = ConfigurationReader.get(invalidPassword);
-
         LoginPage loginPage = new LoginPage();
-        loginPage.login(invalidUsername, invalidPassword);
+        loginPage.login(username, password);
     }
+
 
 
     // error messages for nonauthorized users
