@@ -1,0 +1,153 @@
+[
+  {
+    "line": 2,
+    "elements": [
+      {
+        "line": 3,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 1954953800,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "the user is on the login page",
+            "match": {
+              "location": "com.bleucrm.step_definitions.loginPageStepDefs.the_user_is_on_the_login_page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 11136896100,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "the user logged as \"helpdesk\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"helpdesk\"",
+                  "offset": 19
+                }
+              ],
+              "location": "com.bleucrm.step_definitions.loginPageStepDefs.the_user_logged_as(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 3322063800,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "the user navigates to \"Workgroups\" module",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Workgroups\"",
+                  "offset": 22
+                }
+              ],
+              "location": "com.bleucrm.step_definitions.WorkgroupsStepDefs.the_user_navigates_to_module(java.lang.String)"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-02-18T16:17:49.186Z",
+        "before": [
+          {
+            "result": {
+              "duration": 5288088200,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.bleucrm.step_definitions.Hooks.setUp()"
+            }
+          }
+        ],
+        "line": 8,
+        "name": "User joins to groups",
+        "description": "",
+        "id": ";user-joins-to-groups",
+        "after": [
+          {
+            "result": {
+              "duration": 2831807900,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.bleucrm.step_definitions.Hooks.tearDown(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 2244243900,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "user finds \"Sales\" group and clicks join",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Sales\"",
+                  "offset": 11
+                }
+              ],
+              "location": "com.bleucrm.step_definitions.WorkgroupsStepDefs.user_finds_group_and_clicks_join(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 117686400,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "\"Sales\" group should have Request has been sent message",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Sales\"",
+                  "offset": 0
+                }
+              ],
+              "location": "com.bleucrm.step_definitions.WorkgroupsStepDefs.group_should_have_Request_has_been_sent_message(java.lang.String)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@workg"
+          }
+        ]
+      }
+    ],
+    "name": "",
+    "description": "",
+    "id": "",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/features/Workgroups.feature",
+    "tags": [
+      {
+        "name": "@workg",
+        "type": "Tag",
+        "location": {
+          "line": 1,
+          "column": 1
+        }
+      }
+    ]
+  }
+]
