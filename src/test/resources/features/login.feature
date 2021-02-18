@@ -4,7 +4,6 @@ Feature: Login
   Background:
     Given the user is on the login page
 
-
   Scenario Outline: Verify that user should be able to login as <user> with Valid Credentials
     When the user logs in with "<validUsername>" and "<validPassword>"
     Then the user should be able to login
@@ -12,10 +11,10 @@ Feature: Login
     Examples:
       | user          | validUsername                  | validPassword |
       | HR1           | hr1@cybertekschool.com         | UserUser      |
-      | HR25          | hr30@cybertekschool.com        | UserUser      |
-  #    | Helpdesk5     | helpdesk2@cybertekschool.com   | UserUser      |
+  #    | HR25          | hr30@cybertekschool.com        | UserUser      |
+      | Helpdesk5     | helpdesk2@cybertekschool.com   | UserUser      |
   #    | Helpdesk50    | helpdesk62@cybertekschool.com  | UserUser      |
-  #    | Marketing10   | marketing3@cybertekschool.com  | UserUser      |
+      | Marketing10   | marketing3@cybertekschool.com  | UserUser      |
   #    | Marketing90   | marketing28@cybertekschool.com | UserUser      |
 
 
@@ -32,7 +31,6 @@ Feature: Login
       | marketing7@cybertekschool.com  |                 |
       |                                | UserUser        |
 
-
   Scenario Outline: <usertype> is logged in
     When the user logged as "<usertype>"
 
@@ -43,8 +41,9 @@ Feature: Login
       | marketing |
 
   @login
-  Scenario: <usertype> is logged in
+  Scenario: User is logged successfully
     When the user logged as "usertype"
+
 
 
 
