@@ -1,0 +1,523 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "line": 3,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 1235297000,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "the user is on the login page",
+            "match": {
+              "location": "com.bleucrm.step_definitions.loginPageStepDefs.the_user_is_on_the_login_page()"
+            },
+            "keyword": "Given "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-02-17T20:37:49.583Z",
+        "before": [
+          {
+            "result": {
+              "duration": 1784380000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.bleucrm.step_definitions.Hooks.setUp()"
+            }
+          }
+        ],
+        "line": 23,
+        "name": "Authorized user is logging with hr2 and UserUser",
+        "description": "",
+        "id": "login;authorized-user-is-logging-with-\u003cusername\u003e-and-\u003cpassword\u003e;;2",
+        "after": [
+          {
+            "result": {
+              "duration": 121474000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.bleucrm.step_definitions.Hooks.tearDown(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 7976578000,
+              "status": "passed"
+            },
+            "line": 18,
+            "name": "the user logins with valid \"hr2\" and \"UserUser\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"hr2\"",
+                  "offset": 27
+                },
+                {
+                  "val": "\"UserUser\"",
+                  "offset": 37
+                }
+              ],
+              "location": "com.bleucrm.step_definitions.loginPageStepDefs.the_user_logins_with_valid_and(java.lang.String,java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1010359000,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "the user should be able to login",
+            "match": {
+              "location": "com.bleucrm.step_definitions.loginPageStepDefs.the_user_should_be_able_to_login()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@login"
+          }
+        ]
+      },
+      {
+        "line": 3,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 1165058000,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "the user is on the login page",
+            "match": {
+              "location": "com.bleucrm.step_definitions.loginPageStepDefs.the_user_is_on_the_login_page()"
+            },
+            "keyword": "Given "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-02-17T20:38:01.774Z",
+        "before": [
+          {
+            "result": {
+              "duration": 887939000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.bleucrm.step_definitions.Hooks.setUp()"
+            }
+          }
+        ],
+        "line": 24,
+        "name": "Authorized user is logging with helpdesk2 and UserUser",
+        "description": "",
+        "id": "login;authorized-user-is-logging-with-\u003cusername\u003e-and-\u003cpassword\u003e;;3",
+        "after": [
+          {
+            "result": {
+              "duration": 120881000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.bleucrm.step_definitions.Hooks.tearDown(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 6399434000,
+              "status": "passed"
+            },
+            "line": 18,
+            "name": "the user logins with valid \"helpdesk2\" and \"UserUser\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"helpdesk2\"",
+                  "offset": 27
+                },
+                {
+                  "val": "\"UserUser\"",
+                  "offset": 43
+                }
+              ],
+              "location": "com.bleucrm.step_definitions.loginPageStepDefs.the_user_logins_with_valid_and(java.lang.String,java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1008345000,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "the user should be able to login",
+            "match": {
+              "location": "com.bleucrm.step_definitions.loginPageStepDefs.the_user_should_be_able_to_login()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@login"
+          }
+        ]
+      },
+      {
+        "line": 3,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 617405000,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "the user is on the login page",
+            "match": {
+              "location": "com.bleucrm.step_definitions.loginPageStepDefs.the_user_is_on_the_login_page()"
+            },
+            "keyword": "Given "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-02-17T20:38:11.362Z",
+        "before": [
+          {
+            "result": {
+              "duration": 957734000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.bleucrm.step_definitions.Hooks.setUp()"
+            }
+          }
+        ],
+        "line": 25,
+        "name": "Authorized user is logging with marketing2 and UserUser",
+        "description": "",
+        "id": "login;authorized-user-is-logging-with-\u003cusername\u003e-and-\u003cpassword\u003e;;4",
+        "after": [
+          {
+            "result": {
+              "duration": 121412000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.bleucrm.step_definitions.Hooks.tearDown(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 6078333000,
+              "status": "passed"
+            },
+            "line": 18,
+            "name": "the user logins with valid \"marketing2\" and \"UserUser\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"marketing2\"",
+                  "offset": 27
+                },
+                {
+                  "val": "\"UserUser\"",
+                  "offset": 44
+                }
+              ],
+              "location": "com.bleucrm.step_definitions.loginPageStepDefs.the_user_logins_with_valid_and(java.lang.String,java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1008759000,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "the user should be able to login",
+            "match": {
+              "location": "com.bleucrm.step_definitions.loginPageStepDefs.the_user_should_be_able_to_login()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@login"
+          }
+        ]
+      },
+      {
+        "line": 3,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 754348000,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "the user is on the login page",
+            "match": {
+              "location": "com.bleucrm.step_definitions.loginPageStepDefs.the_user_is_on_the_login_page()"
+            },
+            "keyword": "Given "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-02-17T20:38:20.150Z",
+        "before": [
+          {
+            "result": {
+              "duration": 1005342000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.bleucrm.step_definitions.Hooks.setUp()"
+            }
+          }
+        ],
+        "line": 39,
+        "name": "hr1 is logged in",
+        "description": "",
+        "id": "login;\u003cusername\u003e-is-logged-in;;2",
+        "after": [
+          {
+            "result": {
+              "duration": 127762000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.bleucrm.step_definitions.Hooks.tearDown(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 8814248000,
+              "status": "passed"
+            },
+            "line": 35,
+            "name": "the user logged as \"hr1\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"hr1\"",
+                  "offset": 19
+                }
+              ],
+              "location": "com.bleucrm.step_definitions.loginPageStepDefs.the_user_logged_as(java.lang.String)"
+            },
+            "keyword": "When "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@login"
+          }
+        ]
+      },
+      {
+        "line": 3,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 1119602000,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "the user is on the login page",
+            "match": {
+              "location": "com.bleucrm.step_definitions.loginPageStepDefs.the_user_is_on_the_login_page()"
+            },
+            "keyword": "Given "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-02-17T20:38:30.868Z",
+        "before": [
+          {
+            "result": {
+              "duration": 973488000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.bleucrm.step_definitions.Hooks.setUp()"
+            }
+          }
+        ],
+        "line": 40,
+        "name": "helpdesk2 is logged in",
+        "description": "",
+        "id": "login;\u003cusername\u003e-is-logged-in;;3",
+        "after": [
+          {
+            "result": {
+              "duration": 156263000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.bleucrm.step_definitions.Hooks.tearDown(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 6792717000,
+              "status": "passed"
+            },
+            "line": 35,
+            "name": "the user logged as \"helpdesk2\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"helpdesk2\"",
+                  "offset": 19
+                }
+              ],
+              "location": "com.bleucrm.step_definitions.loginPageStepDefs.the_user_logged_as(java.lang.String)"
+            },
+            "keyword": "When "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@login"
+          }
+        ]
+      },
+      {
+        "line": 3,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 1116448000,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "the user is on the login page",
+            "match": {
+              "location": "com.bleucrm.step_definitions.loginPageStepDefs.the_user_is_on_the_login_page()"
+            },
+            "keyword": "Given "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-02-17T20:38:39.914Z",
+        "before": [
+          {
+            "result": {
+              "duration": 934069000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.bleucrm.step_definitions.Hooks.setUp()"
+            }
+          }
+        ],
+        "line": 41,
+        "name": "marketing3 is logged in",
+        "description": "",
+        "id": "login;\u003cusername\u003e-is-logged-in;;4",
+        "after": [
+          {
+            "result": {
+              "duration": 114670000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.bleucrm.step_definitions.Hooks.tearDown(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 6712038000,
+              "status": "passed"
+            },
+            "line": 35,
+            "name": "the user logged as \"marketing3\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"marketing3\"",
+                  "offset": 19
+                }
+              ],
+              "location": "com.bleucrm.step_definitions.loginPageStepDefs.the_user_logged_as(java.lang.String)"
+            },
+            "keyword": "When "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@login"
+          }
+        ]
+      }
+    ],
+    "name": "Login",
+    "description": "",
+    "id": "login",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/features/login.feature",
+    "tags": []
+  }
+]
