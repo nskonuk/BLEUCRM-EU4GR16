@@ -30,7 +30,7 @@ Feature: Login
       |                                |                 |
       | marketing7@cybertekschool.com  |                 |
       |                                | UserUser        |
-
+ @login
   Scenario Outline: <usertype> is logged in
     When the user logged as "<usertype>"
 
@@ -40,7 +40,7 @@ Feature: Login
       | helpdesk  |
       | marketing |
 
-  @login
+ 
   Scenario: User is logged successfully
     When the user logged as "usertype"
 
